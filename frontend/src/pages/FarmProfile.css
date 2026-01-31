@@ -1,0 +1,244 @@
+.farm-profile-page {
+  min-height: calc(100vh - 80px);
+  padding: 24px;
+  position: relative;
+  background-image: url('/images/image-12c1ffd5-bed4-4167-b89d-1fe6baebded9.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.farm-profile-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(10, 26, 10, 0.5) 0%, rgba(13, 40, 24, 0.6) 100%);
+  z-index: 0;
+}
+
+.farm-profile-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.farm-profile-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.farm-profile-form {
+  background: rgba(13, 40, 24, 0.25);
+  border-radius: 24px;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 32px;
+}
+
+.farm-profile-form h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  color: #e5e7eb;
+}
+
+.profile-subtitle {
+  color: #9ca3af;
+  margin: 0 0 32px;
+}
+
+.profile-section {
+  margin-bottom: 32px;
+}
+
+.profile-section h3 {
+  font-size: 20px;
+  margin: 0 0 16px;
+  color: #e5e7eb;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.form-field input,
+.form-field select {
+  border-radius: 10px;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  background: rgba(13, 40, 24, 0.4);
+  color: #e5e7eb;
+  padding: 8px 12px;
+  font-size: 14px;
+  outline: none;
+  backdrop-filter: blur(8px);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #4ade80;
+  background: rgba(13, 40, 24, 0.5);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.add-field-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.add-field-button:hover {
+  background: rgba(74, 222, 128, 0.25);
+  border-color: rgba(74, 222, 128, 0.6);
+}
+
+.field-card {
+  background: rgba(13, 40, 24, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.field-header h4 {
+  font-size: 18px;
+  margin: 0;
+  color: #e5e7eb;
+}
+
+.remove-field-button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.remove-field-button:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.profile-help {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0 0 16px;
+}
+
+.image-upload-area {
+  border: 2px dashed rgba(74, 222, 128, 0.3);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.2s ease;
+  background: rgba(13, 40, 24, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.image-upload-area:hover {
+  border-color: rgba(74, 222, 128, 0.5);
+  background: rgba(13, 40, 24, 0.3);
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: rgba(74, 222, 128, 0.15);
+  color: #4ade80;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.file-label:hover {
+  background: rgba(74, 222, 128, 0.25);
+  border-color: rgba(74, 222, 128, 0.5);
+}
+
+.farm-visualization {
+  background: rgba(13, 40, 24, 0.25);
+  border-radius: 24px;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 32px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.farm-visualization h3 {
+  font-size: 20px;
+  margin: 0 0 16px;
+  color: #e5e7eb;
+}
+
+.visualization-note {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .farm-profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .farm-visualization {
+    position: static;
+  }
+}

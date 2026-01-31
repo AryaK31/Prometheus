@@ -1,0 +1,332 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  color: #f8fafc;
+  background: #0a1a0a;
+}
+
+/* Dark agriculture theme colors */
+:root {
+  --agri-dark-green: #0d2818;
+  --agri-green: #1a4d2e;
+  --agri-light-green: #2d5a3d;
+  --agri-gold: #8b6914;
+  --agri-brown: #3d2817;
+  --agri-dark-brown: #1a1208;
+  --agri-earth: #4a3728;
+  --agri-accent: #4ade80;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sidebar {
+  background: rgba(13, 40, 24, 0.3);
+  border-radius: 24px;
+  padding: 20px 18px;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  margin-bottom: 4px;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 20%, #4ade80, #2d5a3d);
+  border: 1px solid rgba(74, 222, 128, 0.4);
+}
+
+.logo-glyph {
+  font-size: 22px;
+}
+
+.app-title {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 650;
+}
+
+.app-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.sidebar-section {
+  padding: 10px 8px 4px;
+  border-radius: 16px;
+  background: rgba(13, 40, 24, 0.2);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+.sidebar-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #9ca3af;
+  margin: 0 0 4px;
+}
+
+.sidebar-help {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  font-size: 12px;
+  color: #e5e7eb;
+}
+
+.form-field input,
+.form-field textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  background: rgba(13, 40, 24, 0.4);
+  color: #e5e7eb;
+  padding: 7px 9px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  backdrop-filter: blur(8px);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #6b7280;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #4ade80;
+  background: rgba(13, 40, 24, 0.5);
+}
+
+.image-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.main-panel {
+  background: rgba(13, 40, 24, 0.25);
+  border-radius: 24px;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+}
+
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: rgba(13, 40, 24, 0.2);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.chat-history {
+  flex: 1;
+  padding: 12px 12px 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-message {
+  display: flex;
+}
+
+.chat-message-user {
+  justify-content: flex-end;
+}
+
+.chat-message-assistant {
+  justify-content: flex-start;
+}
+
+.chat-bubble {
+  max-width: 72%;
+  padding: 10px 11px;
+  border-radius: 16px;
+  background: radial-gradient(circle at top left, #22c55e, #15803d);
+  color: #ecfdf5;
+  font-size: 14px;
+  position: relative;
+  box-shadow: 0 8px 18px rgba(22, 163, 74, 0.55);
+}
+
+.chat-message-assistant .chat-bubble {
+  background: radial-gradient(circle at top left, #0ea5e9, #0369a1);
+  color: #e0f2fe;
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.5);
+}
+
+.chat-bubble p {
+  margin: 0 0 4px;
+}
+
+.chat-timestamp {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 10px 10px 12px;
+  border-top: 1px solid rgba(74, 222, 128, 0.2);
+  background: rgba(13, 40, 24, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.chat-input {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  background: rgba(13, 40, 24, 0.4);
+  color: #e5e7eb;
+  padding: 8px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  backdrop-filter: blur(8px);
+}
+
+.chat-input::placeholder {
+  color: #6b7280;
+}
+
+.chat-input:focus {
+  border-color: #4ade80;
+  background: rgba(13, 40, 24, 0.5);
+}
+
+.primary-button,
+.secondary-button {
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 550;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease,
+    color 0.12s ease, opacity 0.12s ease;
+}
+
+.primary-button {
+  background: rgba(45, 90, 61, 0.6);
+  color: #ecfdf5;
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.primary-button:hover {
+  background: rgba(45, 90, 61, 0.75);
+  border-color: rgba(74, 222, 128, 0.6);
+}
+
+.primary-button:active {
+  background: rgba(45, 90, 61, 0.65);
+}
+
+.secondary-button {
+  background: rgba(13, 40, 24, 0.4);
+  color: #e5e7eb;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.secondary-button:hover {
+  background: rgba(13, 40, 24, 0.55);
+  border-color: rgba(74, 222, 128, 0.5);
+}
+
+.secondary-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.secondary-button-active {
+  border-color: #4ade80;
+  background: rgba(13, 40, 24, 0.5);
+}
+
+.voice-controls {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.voice-hint {
+  margin: 0;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+@media (max-width: 960px) {
+  .app-root {
+    padding: 12px;
+  }
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: 2;
+  }
+  .main-panel {
+    order: 1;
+  }
+}
+
