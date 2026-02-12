@@ -1,4 +1,4 @@
-## Prometheus
+# Prometheus
 
 Prometheus is a LangChain-powered AI voice assistant for farmers. It provides crop advice, irrigation analysis, yield predictions, weather-aware planning, multi-objective farm planning, and image-based pest/disease help via a FastAPI backend and a modern React frontend.
 
@@ -43,7 +43,6 @@ export GROQ_API_KEY="YOUR_GROQ_KEY_HERE"
 # IMPORTANT: Use 'python -m uvicorn' to ensure the correct Python environment is used
 python -m uvicorn backend.main:app --reload
 ```
-
 Then visit `http://localhost:8000/docs` for the interactive API docs.
 
 ### Frontend (React + Vite)
